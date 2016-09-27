@@ -1,0 +1,117 @@
+﻿*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+.nav {
+    background-color: dodgerblue;
+}
+
+.links a {
+    color: wheat;
+}
+
+/*
+    Testing absolute positioning
+*/
+.nav-absolute {
+    position: relative;
+}
+.nav-absolute .links {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*
+    Testing floats
+*/
+.nav-float {
+    overflow: auto;
+}
+.nav-float .links {
+    float: right;
+}
+
+/*
+    Testing inline-blocks
+*/
+.grid {
+    text-align: justify;
+    font-size: 0;
+}
+.grid:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.grid .title,
+.grid .links,
+.grid > * {
+    font-size: medium;
+    display: inline-block;
+}
+.grid.top > * {
+    vertical-align: top;
+}
+
+/*
+    Profile
+*/
+
+.profile {
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    border: 1px solid #aaa;
+}
+.profile-header {
+    padding: 1rem;
+}
+.profile-header img {
+    width: 25%;
+    border-radius: 8px;
+}
+.profile-header div {
+    width: 75%;
+    padding-left: 10px;
+}
+.projects {
+    list-style-type: none;
+    padding-left: 0;
+}
+.projects li {
+    padding: 10px;
+    border-top: 1px solid #aaa;
+}
+.ruby {
+    float: right;
+}
+.ruby:after {
+    content: "ruby";
+    color: maroon;
+    float: right;
+}
+.ruby:before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: maroon;
+    vertical-align: middle;
+    margin-right: .5em;
+    border-radius: 50%;
+}
+
+.grid-1 > * {
+    width: 100%;
+}
+@media (min-width: 400px) {
+    .grid-2-400 > * {
+        width: 47%;
+    }
+}
+@media (min-width: 800px) {
+    .grid-3-800 > * {
+        width: 30%;
+    }
+}
